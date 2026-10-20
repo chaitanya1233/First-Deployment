@@ -8,6 +8,11 @@ class Text(BaseModel):
     text : str
 
 
+@app.get("/")
+def root():
+    return {"message": "First Deploy API is live", "docs": "/docs"}
+
+
 @app.get("/health")
 def health():
     return {"status":"ok"}
